@@ -30,6 +30,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user, :name).permit(:top_score)
+    params.require(:user, :name).permit(:name, :top_score)
   end
 end

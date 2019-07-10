@@ -6,19 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'database_cleaner'
+# require 'database_cleaner'
 
-DatabaseCleaner.strategy = :truncation
-DatabaseCleaner.clean
+# DatabaseCleaner.strategy = :truncation
+# DatabaseCleaner.clean
 
 
 
-Beer.delete_all
-Horse.delete_all
-BeerQuestion.delete_all
-HorseQuestion.delete_all
-Quiz.delete_all
-User.delete_all
+# Beer.delete_all
+# Horse.delete_all
+# BeerQuestion.delete_all
+# HorseQuestion.delete_all
+# Quiz.delete_all
+# User.delete_all
 
 require 'csv'
 

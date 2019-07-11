@@ -1,6 +1,4 @@
 class HorseQuestionsController < ApplicationController
-  before_action :find_horse_question, only: [:show, :edit, :destroy]
-
   def index
     @horse_questions = HorseQuestion.all
     render json: @horse_questions, except: [:created_at, :updated_at]
@@ -11,9 +9,6 @@ class HorseQuestionsController < ApplicationController
     quiz = Quiz.find_by(id: params[:quiz_id])
     horse_question = HorseQuestion.createHorseQuestion(quiz)
     render json: horse_question, except: [:created_at, :updated_at]
-  end
-
-  def destroy
   end
 
   private

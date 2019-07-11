@@ -1,3 +1,3 @@
 class Horse < ApplicationRecord
-  has_many :horse_questions, dependent: :destroy
+  has_many :horse_questions
 end

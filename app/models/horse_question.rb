@@ -1,6 +1,6 @@
 class HorseQuestion < ApplicationRecord
-  belongs_to :horse, dependent: :destroy
-  belongs_to :quiz, dependent: :destroy
+  belongs_to :horse
+  belongs_to :quiz
 
   def self.createHorseQuestion(quiz)
     random_number = rand(Horse.all.length) + Horse.first.id

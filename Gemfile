@@ -55,3 +55,6 @@ group :test do
   gem 'database_cleaner'
 end
 # database cleaner for test db.
+
+gem 'active_model_serializers'
+# serialize the data for ActionCable

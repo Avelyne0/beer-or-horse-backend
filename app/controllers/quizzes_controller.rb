@@ -13,9 +13,9 @@ class QuizzesController < ApplicationController
 
   def create
     @quiz = Quiz.create quiz_params
+    ActionCable.server.broadcast('quiz_channel', "#{@quiz.user.name} just started a game!")
     render json: @quiz, except: [:updated_at, :created_at]
   end
-
 
   def show
     render json: @quiz, except: [:updated_at, :created_at]
@@ -23,6 +23,7 @@ class QuizzesController < ApplicationController
 
   def update
     @quiz.update quiz_params
+    ActionCable.server.broadcast('quiz_channel', "#{@quiz.user.name} just reached a score of #{@quiz.score}!")
     render json: @quiz, except: [:updated_at, :created_at]
   end
 

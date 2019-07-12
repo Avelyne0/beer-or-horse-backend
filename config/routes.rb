@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount ActionCable.server => '/cable'
+
   resources :beer_questions
   resources :horse_questions
   root 'welcome#index'

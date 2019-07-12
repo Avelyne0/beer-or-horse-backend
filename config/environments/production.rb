@@ -84,7 +84,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # ActionCable Whitelist
-  config.action_cable.url = "redis://redistogo:4a0619f2974047e9c694e644c6f65cd9@porgy.redistogo.com:11446/"
+  config.action_cable.url = "redis://redistogo:1126318de93017bb4e8e4c4b510334af@porgy.redistogo.com:11468/redis"
   config.action_cable.disable_request_forgery_protection = true
 
   config.web_socket_server_url = "wss://beer-or-horse-backend.herokuapp.com/cable"

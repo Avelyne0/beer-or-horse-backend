@@ -23,8 +23,12 @@ class QuizzesController < ApplicationController
 
   def update
     @quiz.update quiz_params
-    ActionCable.server.broadcast('quiz_channel', "#{@quiz.user.name} just reached a score of #{@quiz.score}!")
+    if @quiz.score % 5 == 0
+      ActionCable.server.broadcast('quiz_channel', "#{@quiz.user.name} just reached a score of #{@quiz.score}!")
+      render json: @quiz, except: [:updated_at, :created_at]
+    else
     render json: @quiz, except: [:updated_at, :created_at]
+    end
   end
 
   def destroy

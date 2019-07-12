@@ -8,6 +8,8 @@
 
 require 'database_cleaner'
 
+DatabaseCleaner.allow_production = true
+DatabaseCleaner.allow_remote_database_url = true
 DatabaseCleaner.strategy = :truncation
 DatabaseCleaner.clean
 

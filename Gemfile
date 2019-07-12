@@ -51,9 +51,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-group :test do
-  gem 'database_cleaner'
-end
+
+gem 'database_cleaner'
+
 # database cleaner for test db.
 
 gem 'active_model_serializers'

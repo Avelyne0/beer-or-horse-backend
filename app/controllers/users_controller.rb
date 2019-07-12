@@ -8,7 +8,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create user_params
-    render json: @user, except: [:email, :password_digest, :updated_at, :created_at]
+    if @user.valid
+      render json: @user, except: [:email, :password_digest, :updated_at, :created_at]
+    else
+      render :json => { :errors => @users.errors.full_messages }
+    end
   end
 
   def show

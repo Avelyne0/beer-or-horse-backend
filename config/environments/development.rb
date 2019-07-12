@@ -56,7 +56,4 @@ Rails.application.configure do
   config.action_cable.url = "ws://localhost:3000/cable"
   config.action_cable.disable_request_forgery_protection = true
 
-  config.web_socket_server_url = "wss://beer-or-horse-backend.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://beer-or-horse-backend.herokuapp.com', 'http://beer-or-horse-backend.herokuapp.com']
-
 end

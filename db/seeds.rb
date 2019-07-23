@@ -19,8 +19,6 @@ Beer.delete_all
 Horse.delete_all
 BeerQuestion.delete_all
 HorseQuestion.delete_all
-Quiz.delete_all
-User.delete_all
 
 require 'csv'
 
